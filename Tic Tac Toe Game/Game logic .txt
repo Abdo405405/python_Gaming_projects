@@ -1,0 +1,7 @@
+1 - run Program 
+2- Show Menu 
+3- Game start or Quit 
+4 - Get Players Details:  Player 1 (name , Symbol) , Player 2 (name , Symbol)
+5 - Board is displayed 
+6 - Game Loops Until Win or Draw 
+7  - restart Game , Quit Game  

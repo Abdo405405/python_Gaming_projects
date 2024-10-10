@@ -1,0 +1,10 @@
+{
+    "sport": {
+        "is_complete": false,
+        "note": "Wake Up at 6 clock "
+    },
+    "quran": {
+        "is_complete": true,
+        "note": "read 3 pages "
+    }
+}
