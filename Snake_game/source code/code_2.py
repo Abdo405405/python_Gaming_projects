@@ -4,7 +4,7 @@ from random import randint  # Import randint for random positioning of the apple
 from snake import Snake, Apple  # Import Snake and Apple classes from the snake module
 from time import sleep  # Import sleep for adding delays in the game loop
 from snake import Shown_text  # Import Shown_text class for displaying score
-
+from snake import make_sound
 # Setup the game screen
 win = turtle.Screen()  # Create a screen object
 win.setup(width=800, height=600)  # Set the screen size to 800x600 pixels
@@ -90,6 +90,8 @@ while True:
     # Check if the snake has hit the boundaries or itself
     if snake.has_hit_boundaries() or snake.has_hit_itself():
         apple.eaten_apples = 0  # Reset the score if the snake dies
+        make_sound("game-start.mp3")
+        
 
     # Update the screen with the latest changes
     win.update()

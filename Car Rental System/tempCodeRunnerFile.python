@@ -1,0 +1,24 @@
+import re 
+
+
+
+import re
+
+# Corrected regular expression pattern
+err_pattern = re.compile(r'[\W\d]+')
+
+string = "%^%^sgfdg"
+
+# Search for the pattern in the string
+r = err_pattern.search(string)
+
+# If a match is found, print the matched part
+if r:
+    print(r.group(0))  # This will print the matched string
+else:
+    print("No match found")
+
+
+
+string.isprintable()
+

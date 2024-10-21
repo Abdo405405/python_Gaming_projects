@@ -1,6 +1,15 @@
 import turtle  # Import the turtle graphics library
 from random import randint  # Import randint for random positioning of the apple
 
+import pygame
+
+# Initialize pygame mixer
+pygame.mixer.init()
+
+def make_sound(file):
+    # Load the sound (make sure the path is correct)
+    eating_sound = pygame.mixer.Sound(file)
+    eating_sound.play()  # Play the sound without blocking
 # Class representing the Snake in the game
 class Snake: 
     def __init__(self, x, y):
@@ -133,6 +142,7 @@ class Apple:
 
     # Move the apple to a new random location on the screen
     def move_apple(self):
+        make_sound(file="eating-sound-effect.mp3")
         self.eaten_apples += 1  # Increment the count of eaten apples
         x = randint(-390, 390)  # Generate a random x-coordinate within the game boundaries
         y = randint(-290, 290)  # Generate a random y-coordinate within the game boundaries
